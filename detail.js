@@ -18,18 +18,14 @@ https.get(options, res => {
   }).on('end', () => {
     const jsonContent = JSON.parse(content)
     const {version, files} = jsonContent.assets[0]
-    const urlPrefix = `//cdn.bootcss.com/${keyword}/${version}/`
+    const urlPrefix = `cdn.bootcss.com/${keyword}/${version}/`
 
     for (let file of files) {
       const name = `${urlPrefix}${file}`
-      const tag = 
-        name.endsWith('.css') ? 
-        `<link href="${name}" rel="stylesheet">`:
-        `<script src="${name}"></script>`
       
       result.push({
         title: name, 
-        arg: tag // 按回车后，alfred 会把这个变量传递给下个步骤
+        arg: name // 按回车后，alfred 会把这个变量传递给下个步骤
       })
     }
 
