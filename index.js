@@ -1,20 +1,10 @@
 const keyword = process.argv[2]
+const getSearchResult = require('./lib/getSearchResult')
 const fs = require('fs')
-const getNames = require('./getNames.js')
+const cdnName = fs.readFileSync('./.cdnrc', 'utf-8')
 
 ;(async function() {
-  const names = await getNames()
-  const result = []
-
-  for (let name of names) {
-    if (name.includes(keyword)) {
-      result.push({
-        title: name, 
-        // subtitle: name,
-        arg: name // 按回车后，alfred 会把这个变量传递给下个步骤
-      })
-    }
-  }
+  const result = await getSearchResult(cdnName, keyword)
 
   console.log(JSON.stringify({
     items: result

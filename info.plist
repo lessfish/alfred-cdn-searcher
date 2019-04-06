@@ -23,6 +23,8 @@
 				<false/>
 			</dict>
 		</array>
+		<key>3CF9F85E-725F-45D8-8DDD-5B883EBBDA4C</key>
+		<array/>
 		<key>5E78EC69-6D31-432F-BFCC-49839E43246E</key>
 		<array>
 			<dict>
@@ -112,12 +114,36 @@
 			</dict>
 		</array>
 		<key>D5ACA1AA-8023-434D-B464-8F48EE1D6A99</key>
-		<array/>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>3CF9F85E-725F-45D8-8DDD-5B883EBBDA4C</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>EA27194E-6971-4B07-9539-71B75BD5FDD4</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
 				<string>92B930EF-7A2A-4355-9C33-15210DF790CE</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>F57FB278-CADE-48BC-AE4C-4B9D89FAEC71</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>51CA00DD-A488-4B02-86EA-80AB053DBAF8</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -291,6 +317,44 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<false/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>Copied!</string>
+				<key>title</key>
+				<string>Copied!</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>3CF9F85E-725F-45D8-8DDD-5B883EBBDA4C</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<false/>
+				<key>clipboardtext</key>
+				<string>{query}</string>
+				<key>transient</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>D5ACA1AA-8023-434D-B464-8F48EE1D6A99</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
@@ -317,23 +381,6 @@
 			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
 			<string>BEC210BB-C3FF-4B53-A6AD-CAB50E449B46</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>autopaste</key>
-				<false/>
-				<key>clipboardtext</key>
-				<string>{query}</string>
-				<key>transient</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.clipboard</string>
-			<key>uid</key>
-			<string>D5ACA1AA-8023-434D-B464-8F48EE1D6A99</string>
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
@@ -415,6 +462,60 @@
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>adduuid</key>
+				<false/>
+				<key>allowemptyfiles</key>
+				<true/>
+				<key>createintermediatefolders</key>
+				<false/>
+				<key>filename</key>
+				<string>.cdnrc</string>
+				<key>filetext</key>
+				<string>{query}</string>
+				<key>relativepathmode</key>
+				<integer>1</integer>
+				<key>type</key>
+				<integer>1</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.writefile</string>
+			<key>uid</key>
+			<string>51CA00DD-A488-4B02-86EA-80AB053DBAF8</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>fixedorder</key>
+				<false/>
+				<key>items</key>
+				<string>[{"title":"bootcdn","arg":"bootcdn"},{"title":"cdnjs","arg":"cdnjs"}]</string>
+				<key>keyword</key>
+				<string>cdns</string>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string>选择 cdn 源</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.listfilter</string>
+			<key>uid</key>
+			<string>F57FB278-CADE-48BC-AE4C-4B9D89FAEC71</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
 	</array>
 	<key>readme</key>
 	<string></string>
@@ -433,6 +534,20 @@
 			<integer>710</integer>
 			<key>ypos</key>
 			<integer>180</integer>
+		</dict>
+		<key>3CF9F85E-725F-45D8-8DDD-5B883EBBDA4C</key>
+		<dict>
+			<key>xpos</key>
+			<integer>960</integer>
+			<key>ypos</key>
+			<integer>150</integer>
+		</dict>
+		<key>51CA00DD-A488-4B02-86EA-80AB053DBAF8</key>
+		<dict>
+			<key>xpos</key>
+			<integer>340</integer>
+			<key>ypos</key>
+			<integer>430</integer>
 		</dict>
 		<key>5E78EC69-6D31-432F-BFCC-49839E43246E</key>
 		<dict>
@@ -479,7 +594,7 @@
 		<key>D40C4906-DEC9-4D64-BFF6-19229F1039A5</key>
 		<dict>
 			<key>xpos</key>
-			<integer>150</integer>
+			<integer>140</integer>
 			<key>ypos</key>
 			<integer>290</integer>
 		</dict>
@@ -497,7 +612,16 @@
 			<key>ypos</key>
 			<integer>10</integer>
 		</dict>
+		<key>F57FB278-CADE-48BC-AE4C-4B9D89FAEC71</key>
+		<dict>
+			<key>xpos</key>
+			<integer>140</integer>
+			<key>ypos</key>
+			<integer>430</integer>
+		</dict>
 	</dict>
+	<key>version</key>
+	<string></string>
 	<key>webaddress</key>
 	<string>https://github.com/hanzichi/CDNSearcher</string>
 </dict>
