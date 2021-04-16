@@ -10,6 +10,8 @@
 * `cdns` 选择 cdn 源（目前支持 bootcdn 和 cdnjs）
 * `cdnc` 清除 bootcdn 缓存
 
+> 注意：在进行搜索前，请先用 `cdns` 添加源，否则搜索不生效！
+
 bootcdn [没提供搜索接口](https://www.bootcdn.cn/api/#faq)，默认从 [所有开源库名称列表](https://api.bootcdn.cn/names.min.json) 搜索库，该列表会缓存到本地，默认一个月更新一次，也可以用 `cdnc` 清除缓存（所有开源库名称列表应该是根据搜索频率排列的库）
 
 cdnjs 走搜素接口
