@@ -70,3 +70,20 @@
 ![](https://images2018.cnblogs.com/blog/675542/201806/675542-20180627170347709-1203455930.png)
 
 至此，这个简单的 workflow 算是完工了。
+
+---
+
+2023-02-13 Add:
+
+项目中是这样去执行脚本 `/usr/local/bin/node index.js "{query}"`，但是并不是每个用户的电脑中都有 `/usr/local/bin/node` 这个路径。因为 Alfred 中 zsh 的执行环境和电脑中是隔离的，所以也不能直接用 `node xx` 去执行
+
+所以需要手动修改下执行路径，可以用 `which node` 来拿到，然后替换下
+
+也可以用 `echo $PATH` 获取电脑中所有的执行路径，然后加到 workflow 上：（此时需要确保安装过 Node 并且在命令行里执行 `node xx` 没问题，这样其实运行 `node xx` 就会去 PATH 里面找）
+
+```bash
+PATH=/Users/bytedance/.nvm/versions/node/v16.18.1/bin:/usr/local/bin/:/usr/local/opt/node@14/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/puppetlabs/bin
+node index.js "{query}"
+```
+
+另一种方式参考 [alfred-fkill](https://github.com/SamVerschueren/alfred-fkill/blob/master/info.plist)，用 [run-node](https://github.com/sindresorhus/run-node) 去实现，个人认为更通用点，这样用户不需要修改
