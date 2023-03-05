@@ -32,7 +32,7 @@
 
 输入的 `vue`，其实就是 `{query}`，然后会自动执行这行命令 `/usr/local/bin/node index.js "{query}"`，`{query}` 会自动被自己输入的字符串代替，这里就很熟悉了吧，执行一个 node 脚本，这个脚本非常简单，无非就是做一个 HTTP 请求，分析并得到一些数据。
 
-如何展示这些数据？如果用的是 js，**代码中 `console.log()` 的数据便会展示在 Alfred 前台**。具体看 [这个文件](https://github.com/hanzichi/CDNSearcher/blob/master/index.js)（**所以用 js 开发的时候，debug 不能用 console.log，可以用 console.warn 等代替**）。最终的展示是一个数组，每个元素是一个对象，可以包括如下几个 key：
+如何展示这些数据？如果用的是 js，**代码中 `console.log()` 的数据便会展示在 Alfred 前台**。具体看 [这个文件](https://github.com/hanzichi/CDNSearcher/blob/master/index.js)（**所以用 js 开发的时候，debug 不能用 console.log，可以用 console.warn 等代替**）。最终的展示是一个数组，每个元素是一个对象，可以包括如下几个 key：（更多可参考 [Script Filter JSON Format](https://www.alfredapp.com/help/workflows/inputs/script-filter/json/)）
 
 - title
 - subtitle
